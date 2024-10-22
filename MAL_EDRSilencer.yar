@@ -14,5 +14,5 @@ rule MAL_EDRSilencer {
 		$m3 = "Custom Outbound Filter" wide
 	condition:
 		pe.is_pe and 
-    ( ( all of ($s*) ) or ( all of ($m*) ) )
+   		( ( all of ($s*) ) or ( all of ($m*) ) )
 }
