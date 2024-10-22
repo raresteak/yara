@@ -13,5 +13,6 @@ rule MAL_EDRSilencer {
 		$m2 = "SeDebugPrivilege"
 		$m3 = "Custom Outbound Filter" wide
 	condition:
-		( all of ($s*) ) or ( all of ($m*) )
+		pe.is_pe and 
+    ( ( all of ($s*) ) or ( all of ($m*) ) )
 }
