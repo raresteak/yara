@@ -1,5 +1,5 @@
 import "pe"
-rule MAL_concatenated_files {
+rule TTP_concatenated_files {
         meta:
                 description = "Detect exe files that are concatenated together"
         strings:
