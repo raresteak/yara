@@ -1,7 +1,8 @@
 import "pe"
 rule TTP_concatenated_files {
         meta:
-                description = "Detect exe files that are concatenated together"
+                description = "This signature will detect the presence of exe files that are concatenated together."
+                author = "Raresteak"
         strings:
                 $text = "This program cannot be run in DOS mode" ascii
         condition:
