@@ -8,7 +8,7 @@ rule TTP_concatenated_files {
         condition:
                 uint16be(0) == 0x4d5a
                 and
-                #text > 2  //setting >1 will create a few false positives with sysinternals and MS bins, and may detect more
+                #text > 2  //setting >1 will create a few false positives with sysinternals and MS bins, and may detect more badness
                 and
                 pe.version_info["OriginalFilename"] endswith "exe"
 }
